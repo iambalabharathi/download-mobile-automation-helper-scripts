@@ -1,0 +1,21 @@
+name: "Download utility scripts"
+description: "A list of open source utilites to help mobile automation"
+
+inputs:
+  path:
+    description: "Path to download the utility script"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: "Download utility scripts"
+      shell: zsh {0} 
+      run: |
+        MOBILE_AUTOMATION_UTLITIES_SCRIPT_URL="https://raw.githubusercontent.com/iambalabharathi/mobile-automation-helper-scripts/main/mobile-automation-utilities.sh"
+        SCRIPT_PATH="${{ inputs.path }}"
+
+        echo "Downloading utility scripts to $SCRIPT_PATH"
+        curl -o "$SCRIPT_PATH" "$MOBILE_AUTOMATION_UTLITIES_SCRIPT_URL"
+        chmod +x "$SCRIPT_PATH"
+        echo "Download complete ✅"
