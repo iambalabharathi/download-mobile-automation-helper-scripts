@@ -1,5 +1,7 @@
 name: "Download utility scripts"
 description: "A list of open source utilites to help mobile automation"
+icon: arrow-down
+color: white
 
 inputs:
   path:
