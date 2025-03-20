@@ -1,7 +1,6 @@
 name: "Download utility scripts"
 description: "A list of open source utilites to help mobile automation"
-icon: arrow-down
-color: white
+author: "Balabharathi Jayaraman (iambalabharathi)"
 
 inputs:
   path:
@@ -21,3 +20,7 @@ runs:
         curl -o "$SCRIPT_PATH" "$MOBILE_AUTOMATION_UTLITIES_SCRIPT_URL"
         chmod +x "$SCRIPT_PATH"
         echo "Download complete ✅"
+
+branding:
+  icon: "arrow-down"
+  color: "white"
